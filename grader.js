@@ -46,16 +46,6 @@ var cheerioHtmlFile = function(htmlfile) {
 	return cheerio.load(fs.readFileSync(htmlfile));
 };
 
-var cheerioURL = function(url) {
-	var data2;
-	rest.get(url).on('complete', function(data) {
-		data2 = data;
-	console.log(data2);
-	});
-	console.log(data2);
-	return cheerio.load(data2);
-};
-
 var loadChecks = function(checksfile) {
 	return JSON.parse(fs.readFileSync(checksfile));
 };
